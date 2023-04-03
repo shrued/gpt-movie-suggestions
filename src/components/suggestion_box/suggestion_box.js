@@ -13,8 +13,11 @@ export const Response = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  color: red;
+  text-align: center;
+  margin: 10px;
+  font-size: 1.6em;
   @media (max-width: 900px) {
     flex-direction: column;
+    font-size: 1em;
   }
 `;
