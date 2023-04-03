@@ -39,8 +39,8 @@ export default function Suggestion_Box() {
     <>
       <Container>
         <Form onSubmit={onGenreSubmit}>
-          <Form.Group className="p-3">
-            <Form.Label>Pick a genre</Form.Label>
+          <Form.Group className="pb-3">
+            <Form.Label className="input-title">Pick a genre</Form.Label>
             <Form.Select className="w-auto" name="genre">
               {[
                 "Action",
@@ -66,8 +66,10 @@ export default function Suggestion_Box() {
               ))}
             </Form.Select>
           </Form.Group>
-          <Form.Group className="p-3">
-            <Form.Label>Do you want a movie or a TV show?</Form.Label>
+          <Form.Group className="pb-3">
+            <Form.Label className="input-title">
+              Do you want a movie or a TV show?
+            </Form.Label>
             <Form.Select className="w-auto" name="whichTV">
               {["Movie", "TV Show"].map((option, idx) => (
                 <option key={idx}>{option}</option>
@@ -75,8 +77,8 @@ export default function Suggestion_Box() {
             </Form.Select>
           </Form.Group>
 
-          <Button className="m-3" type="submit" value="submit">
-            Get Suggestion{" "}
+          <Button type="submit" value="submit">
+            Get Suggestions{" "}
             {isLoading ? (
               <Spinner
                 as="span"
